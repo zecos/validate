@@ -7,8 +7,8 @@ import {
     createNumberValidator,
     createStringValidator,
     createOneOfValidator,
-} from './validators';
-import { emailValidator, dobValidator } from './index'
+} from './validate';
+import { validateEmail, validateDOB } from './index'
 import expect from 'expect'
 
 
@@ -64,8 +64,8 @@ test('integration all checkers', () => {
 })
 
 test('use presets', () => {
-  testValidator(emailValidator, "zwhit_chcox@gmail.com", [])
-  testValidator(emailValidator, "password#1805", [new Error('Invalid input.')])
+  testValidator(validateEmail, "zwhit_chcox@gmail.com", [])
+  testValidator(validateEmail, "password#1805", [new Error('Invalid input.')])
 })
 
 test('digits', () => {
@@ -79,9 +79,9 @@ test('digits', () => {
   testValidator(numberValidator, 10, [new Error("Must be less than or equal to 9.")])
 })
 
-test('dobValidator', () => {
-  testValidator(dobValidator, new Date(1920, 1,1), [])
-  testValidator(dobValidator, new Date(1820, 1,1), [new Error("Date of birth cannot be before January 1, 1900")])
+test('validateDOB', () => {
+  testValidator(validateDOB, new Date(1920, 1,1), [])
+  testValidator(validateDOB, new Date(1820, 1,1), [new Error("Date of birth cannot be before January 1, 1900")])
 })
 
 test("oneOf validator", () => {

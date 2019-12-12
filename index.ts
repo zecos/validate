@@ -1,5 +1,5 @@
-export { createStringValidator, createNumberValidator, createOneOfValidator } from './validators'
-import { createStringValidator, createNumberValidator } from './validators'
+export { createStringValidator, createNumberValidator, createOneOfValidator } from './validate'
+import { createStringValidator, createNumberValidator } from './validate'
 
 
 export const validateName = createStringValidator({
