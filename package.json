@@ -1,5 +1,5 @@
 {
-  "name": "@zecos/validators",
+  "name": "@zecos/validate",
   "version": "0.0.5",
   "description": "",
   "main": "./dist/index.js",
@@ -10,12 +10,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zecos/validators.git"
+    "url": "git+https://github.com/zecos/validate.git"
   },
   "keywords": [
     "validation",
     "validator",
     "validators",
+    "validate",
     "fp",
     "function programming",
     "string validation",
@@ -24,9 +25,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/zecos/validators/issues"
+    "url": "https://github.com/zecos/validate/issues"
   },
-  "homepage": "https://github.com/zecos/validators#readme",
+  "homepage": "https://github.com/zecos/validate#readme",
   "dependencies": {
     "human-list": "^0.0.1"
   },

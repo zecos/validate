@@ -2,38 +2,38 @@ export { createStringValidator, createNumberValidator, createOneOfValidator } fr
 import { createStringValidator, createNumberValidator } from './validators'
 
 
-export const nameValidator = createStringValidator({
+export const validateName = createStringValidator({
   min: 1,
   max: 40,
   validChars: ["letters", "., "],
 })
-export const ageValidator = createNumberValidator({
+export const validateAge = createNumberValidator({
   min: 0,
   max: 120,
 })
-export const usernameValidator = createStringValidator({
+export const validateUsername = createStringValidator({
   min: 3,
   max: 40,
   validChars: ["letters", "digits", "_-"]
 })
-export const phoneValidator = createStringValidator({
+export const validatePhone = createStringValidator({
   min: 10,
   max: 10,
   validChars: ["digits"],
 })
-export const passwordValidator = createStringValidator({
+export const validatePassword = createStringValidator({
   mustContain: ["digits", "lowercase", "uppercase", "symbols"],
   min: 8,
   max: 100,
 })
-export const emailValidator = createStringValidator({
+export const validateEmail = createStringValidator({
   regexp: "^(([^<>()[\\]\\\\.,;:\\s@\"]+(\\.[^<>()[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$",
 })
-export const einValidator = createStringValidator({
+export const validateEIN = createStringValidator({
   regexp: "^[1-9]\\d?-\\d{7}$",
 })
 
-export const dobValidator = (() => {
+export const validateDOB = (() => {
   const min = new Date(1900, 1, 0)
   return (date: any) => {
     if (!(date instanceof Date)) {
